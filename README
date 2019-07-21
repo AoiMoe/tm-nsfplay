@@ -1,0 +1,74 @@
+nsfplay (version 0.1.3)
+   - A console based NSF/KSS/GBR/GBS/HES/AY player
+
+
+ * これは？
+     NSF/KSS/GBR/GBS/HES/AY (+NEZ/ZIPファイル)ファイルを
+     再生するプログラムです。Linux Zaurus (SL-C700) でも、
+     実用的な再生が可能です。
+
+     HES,VRC7(NSF) 辺りは重めです…。
+
+
+ * コンパイル方法
+    - Linux Zaurus (SL-C700)
+      ※cygwin 上のクロスコンパイル環境で確認
+        $ make -f makefile.zaurus
+    - 他の Linux 環境
+      ※libz.so が必要です(コンパイル未確認)
+        $ make -f makefile.linux
+
+ * インストール方法
+    nsfplay 本体を適当な場所にコピーしてください。
+    
+
+ * 使い方
+    - 再生開始
+        $ nsfplay [オプション] <ファイル名>
+    - 曲選択
+        カーソルキー, シャトルキー(SL-C700)
+    - 一時停止
+        Enter, OKキー(SL-C700)
+	※ 0.1.2 から機能が変わりました
+    - 終了
+        Q, ESC, Cancelキー(SL-C700)
+
+
+ * オプション
+    -f<frequency>    再生周波数(Hz) (default: 44100)
+    -t<time>         再生時間(sec) (default: 180)
+    -n<songno>       曲番号
+    -s               一曲だけ再生し、終了
+
+
+ * ライセンス
+   nezp0948s, kbhit, zlib ディレクトリ以下は、それぞれの作者の
+   ライセンスに従います(改変前の *.orig ファイルを含む)。
+   nsfplay ディレクトリ直下のソースは GPL2 です。
+
+
+ * 免責事項
+   このプログラムは無保証です。
+   このプログラムを運用した結果につきまして、作者は一切責任を
+   負いませんのでご注意ください。
+
+
+ * 参考にしたもの
+    - NEZplug, nsf2wav
+        http://nezplug.sourceforge.net/
+    - mdxplay (by Koji AGAWA)
+        http://www.self-core.org/~kaoru-k/
+    - mdxplay (by Daisuke NAGANO)
+        http://member.nifty.ne.jp/Breeze/softwares/unix/mdxplay.html
+    - festalon
+        http://festalon.sourceforge.net/
+
+
+ * 配布ページ
+    - http://1974.jp/%7Etm/
+
+
+ * 作者
+   - AUTHORS 参照
+
+

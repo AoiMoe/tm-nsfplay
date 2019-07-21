@@ -1,0 +1,18 @@
+* nezplug (Plugin code for playing NSF, KSS, GBR, GBS, HES and AY files)
+    Mamiya <mamiya@users.sf.net>
+    http://nezplug.sf.net/
+
+* kbhit (MS-DOS kbhit() emulation code)
+    from the book "Beginning Linux Programming"
+    by Neil Matthew & Richard Stones
+    This code also founds in http://www.wrox.com/
+
+* zlib-1.1.4 (general purpose data compression library)
+    Jean-loup Gailly <jloup@gzip.org>
+    Mark Adler <madler@alumni.caltech.edu>
+    http://www.gzip.org/zlib/
+
+* nsfplay (UI ;) )
+    T.MITSUYOSHI <micchan@geocities.co.jp>
+    http://1974.jp/%7Etm/
+
