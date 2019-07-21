@@ -263,10 +263,10 @@ void kmz80_reset(KMZ80_CONTEXT *context) {
 	M1CYCLE = 1;	/* MSXなら2 */
 	MEMCYCLE = 3;
 	IOCYCLE = 4;
-	OPT = kmz80_ot_xx;
-	OPTCB = kmz80_ot_cbxx;
-	OPTED = kmz80_ot_edxx;
-	CYT = kmz80_ct;
+	context->opt = kmz80_ot_xx;
+	context->optcb = kmz80_ot_cbxx;
+	context->opted = kmz80_ot_edxx;
+	context->cyt = kmz80_ct;
 	SYSMEMREAD = kmz80_memread;
 	SYSMEMWRITE = kmz80_memwrite;
 }

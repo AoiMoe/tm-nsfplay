@@ -14,7 +14,7 @@ CFLAGS =  -pipe -Wall -O2
 #CFLAGS += -DDEFAULT_FREQ=44100
 CFLAGS += -DDEFAULT_TIME=180
 CFLAGS += $(INCLUDES)
-LFLAGS =  -lm -lz
+LFLAGS =  -lm -lz -laoss
 
 
 VPATH = $(NEZPLUG_SRC)/nes \
@@ -34,6 +34,7 @@ OBJS = nsfplay.o \
 	kmdmg.o kmr800.o kmz80.o kmz80c.o kmz80t.o kmevent.o \
 	songinfo.o m_kss.o m_hes.o m_zxay.o m_gbr.o nsdout.o nsdplay.o \
 	nsfsdk.o csounix.o \
+	memzip.o nez.o \
 	kbhit.o
 
 
@@ -45,7 +46,7 @@ all: nsfplay
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 nsfplay: $(OBJS)
-	$(LD) $(LFLAGS) -o $@ $^
+	$(LD) -o $@ $^ $(LFLAGS)
 
 clean:
 	rm -f nsfplay

@@ -100,9 +100,9 @@ static void NES6502WriteHandlerSet(Uint bank, WRITEHANDLER wh)
 }
 
 #define EXTREADWRITE(p) \
-static Uint __fastcall ExtRd##p##(Uint A) \
+static Uint __fastcall ExtRd##p(Uint A) \
 { \
-	NES_READ_HANDLER *ph = nprh[0x##p##]; \
+	NES_READ_HANDLER *ph = nprh[0x##p]; \
 	do \
 	{ \
 		if (ph->min <= A && A <= ph->max) \
@@ -112,9 +112,9 @@ static Uint __fastcall ExtRd##p##(Uint A) \
 	} while ((ph = ph->next) != 0); \
 	return 0; \
 } \
-static void __fastcall ExtWr##p##(Uint A, Uint V) \
+static void __fastcall ExtWr##p(Uint A, Uint V) \
 { \
-	NES_WRITE_HANDLER *ph = npwh[0x##p##]; \
+	NES_WRITE_HANDLER *ph = npwh[0x##p]; \
 	do \
 	{ \
 		if (ph->min <= A && A <= ph->max) \

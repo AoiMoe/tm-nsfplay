@@ -439,10 +439,10 @@ void kmdmg_reset(KMZ80_CONTEXT *context) {
 	M1CYCLE = 0;
 	MEMCYCLE = 4;
 	IOCYCLE = 4;
-	OPT = kmdmg_ot_xx;
-	OPTCB = kmdmg_ot_cbxx;
-	OPTED = 0;
-	CYT = kmdmg_ct;
+	context->opt = kmdmg_ot_xx;
+	context->optcb = kmdmg_ot_cbxx;
+	context->opted = 0;
+	context->cyt = kmdmg_ct;
 	SYSMEMREAD = kmdmg_memread;
 	SYSMEMWRITE = kmdmg_memwrite;
 }
