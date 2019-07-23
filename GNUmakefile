@@ -1,4 +1,4 @@
-all : nsfplay
+all : out/tm-nsfplay
 
 CC = gcc
 LD = gcc
@@ -38,16 +38,21 @@ OBJS = nsfplay.o \
 	kbhit.o
 
 
-all: nsfplay
+all: out/tm-nsfplay
 
 .SUFFIXES: .c .o
 
-%.o : %.c
+out/%.o : %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-nsfplay: $(OBJS)
+$(addprefix out/, $(OBJS)) : out
+
+out/tm-nsfplay: $(addprefix out/, $(OBJS))
 	$(LD) -o $@ $^ $(LFLAGS)
 
 clean:
-	rm -f nsfplay
-	rm -f $(OBJS)
+	rm -f out/tm-nsfplay
+	rm -f $(addprefix out/, $(OBJS))
+
+out:
+	mkdir out
