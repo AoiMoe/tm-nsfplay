@@ -9,10 +9,10 @@
 #include <string.h>
 
 #include "common/nsfsdk/nsfsdk.h"
-#include "common/zlib/nez.h"
+#include "common/nez/nez.h"
 #include "kbhit.h"
 
-#define NSFPLAY_VERSION     "0.1.3dev"
+#define NSFPLAY_VERSION     "0.9.99dev"
 
 #define HAVE_SYS_IOCTL_H
 #define HAVE_OSS_AUDIO
