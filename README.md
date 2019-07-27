@@ -26,7 +26,7 @@ This program is confirmed to work on Ubuntu-16.04.  To compile this on Ubuntu, t
 ## Licenses
 
 - kbhit : GPLv2
-- nezp0948s : PDS, although there are some exceptions
+- nezplug([external source](https://github.com/AoiMoe/nezplug)) : PDS, although there are some exceptions
 - nsfplay.c : GPLv2
 
 For the details, see the text files in each portions.
